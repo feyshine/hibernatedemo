@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.feyshine.pojo.User" table="user" schema="GZIP_BASE">
+        <id name="id"  type="java.lang.Integer">
+            <column name="id" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <!-- 两个name 的值不能相同，否则报错 -->
+        <property name="username" type="string">
+            <column name="USERNAME" length="50" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
